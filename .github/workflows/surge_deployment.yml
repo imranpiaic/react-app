@@ -27,17 +27,18 @@ jobs:
       Uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-    
+    -name: Github action for yarn 
     - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: build # will run `yarn build` command  
+          # yarn
+          cmd: Install  
         
     # Runs a set of commands using the runners shell
     - name: Build React App
       run: yarn build
     
     - name: Install Surge
-      run: npm install --g surge
+      run: npm install -g surge
     
     - name: Deploy the surge
       run: surge ./ react-app-cnc.surge.sh/ --token ${{secrets.SURGE_TOKEN}}     

@@ -1,27 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Hello from './Hello';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <div>Updated By <b>IMRAN</b> CNC Student</div>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App({name, age}) {
+  return <div>Hello from App.js updated <strong> {name}</strong> Age={age-10}
+         <br/>
+         <Hello firstname={name}></Hello>        
+        </div>
 }
 
 export default App;
